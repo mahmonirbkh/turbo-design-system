@@ -5,7 +5,12 @@ export interface ButtonProps
 
 export function Button({ children, ...other }: ButtonProps): JSX.Element {
   return (
-    <button type="button" {...other}>
+    <button style={{
+      color: "blue",
+      border: "1px solid gray",
+      padding: 10,
+      borderRadius: 10,
+    }} type="button" {...other}>
       {children}
     </button>
   );
