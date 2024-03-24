@@ -4,8 +4,34 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": ["dom", "ES2015"],
     "module": "ESNext",
-    "target": "es6"
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "components/*": ["lib/components/*"],
+      "atoms/*": ["lib/components/atoms/*"],
+      "molecules/*": ["lib/components/molecules/*"],
+      "organisms/*": ["lib/components/organisms/*"],
+      "grid/*": ["lib/components/grid/*"],
+      "icons/*": ["lib/icons/*"],
+      "const/*": ["lib/const/*"],
+      "helpers/*": ["lib/helpers/*"],
+    },
   }
 }
